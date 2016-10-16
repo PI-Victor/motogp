@@ -11,7 +11,7 @@ import (
 
 var (
 	yamahaMotoGPTeam = teams.Team{
-		Name: "Yamaha Motogp Team",
+		Name: "Yamaha MotoGP Team",
 	}
 	hondaRacingCorporation = teams.Team{
 		Name: "Honda Racing Corporation",
@@ -89,11 +89,11 @@ func TestGetNextTrackInvalid(t *testing.T) {
 		t.Errorf("Expected nexTrack to be nil, got %#v", nextTrack)
 	}
 	if err != errTrackDoesNotExist {
-		t.Errorf("Expected error to be %s, got %#v", errTrackDoesNotExist, err)
+		t.Errorf("Expected error to be %#v, got %#v", errTrackDoesNotExist, err)
 	}
 }
 
-func TestGetPrevious(t *testing.T) {
+func TestGetPreviousTrack(t *testing.T) {
 	c := mockNewChampionship()
 	previousTrack, err := c.GetPreviousTrack(2)
 	if err != nil && err != errTrackDoesNotExist {
