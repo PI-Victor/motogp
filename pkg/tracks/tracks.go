@@ -32,7 +32,7 @@ var (
 			"Hot": 4, // 4 percent handicap e.g.: Texas
 		},
 		4: {
-			"Cold": 7, // e.g. Germany
+			"Cold": 7, // e.g. Germany Sachsenring
 		},
 	}
 )
