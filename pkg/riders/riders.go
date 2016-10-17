@@ -8,7 +8,7 @@ import (
 type Rider struct {
 	Name string
 	Rank Rank
-	Team teams.Team
+	Team *teams.Team
 }
 
 // Rank holds the rank based on what weather the track is experiencing.
@@ -19,6 +19,7 @@ type Rank struct {
 	Clear int
 }
 
+// GetTeam returns the team that the specific rider belongs to.
 func (r *Rider) GetTeam() *teams.Team {
-	return nil
+	return r.Team
 }
